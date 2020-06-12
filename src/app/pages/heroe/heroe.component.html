@@ -57,14 +57,14 @@
         <button *ngIf="heroe.activo" 
                 (click)="heroe.activo = false"
                 class="btn btn-outline-success w-50" type="button">
-          <i class="fa fa-smile"></i>
+          <i class="fas fa-thumbs-up"></i>
           Activo
         </button>
 
         <button *ngIf="!heroe.activo" 
                 (click)="heroe.activo = true"
                 class="btn btn-outline-danger w-50" type="button">
-          <i class="fa fa-frown"></i>
+          <i class="fas fa-thumbs-down"></i>
           Inactivo
         </button>
       </div>

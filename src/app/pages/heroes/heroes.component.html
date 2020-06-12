@@ -23,6 +23,7 @@
       <th scope="col">Poder</th>
       <th scope="col">Vivo</th>
       <th scope="col">Tools</th>
+      <th scope="col">Buttons</th>
     </tr>
   </thead>
   <tbody>
@@ -32,7 +33,23 @@
         <td>{{ heroe.nombre }}</td>
         <td>{{ heroe.poder }}</td>
         <td>{{ heroe.activo }}</td>
-        <td></td> 
+        <td>
+          <label *ngIf="heroe.activo" class="badge badge-success">Activo</label>
+          <label *ngIf="!heroe.activo" class="badge badge-danger">Inactivo</label>
+        </td> 
+
+        <td>
+          <button class="btn btn-info mr-1"
+                  [routerLink]="['/heroe', heroe.id ]">
+                  <i class="fas fa-pen-square" aria-hidden="true"></i>
+          </button>
+  
+          <button class="btn btn-danger"
+                  >
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+
     </tr>
   </tbody>
 </table>

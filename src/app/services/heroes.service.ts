@@ -50,6 +50,15 @@ export class HeroesService {
     return heroes;
   }
 
-  
+
+  getHeroe( id: string ) {
+    return this.http.get(`${ this.url }/Heroes/${ id }.json`);
+  }
+
+
+
+
+
+
 
 }

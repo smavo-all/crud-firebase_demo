@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { HeroeModel } from 'src/app/models/heroe.model';
 
+import Swal from 'sweetalert2'
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -18,7 +20,7 @@ export class HeroesComponent implements OnInit {
     this.heroesService.getHeroes()
       .subscribe(resp => {
       this.heroes = resp
-      console.log(resp);
+      //console.log(resp);
     });
 
   }
