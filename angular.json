@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crud-firebase"
+    }
+  },
+  "defaultProject": "crud-firebase",
+  "cli": {
+    "analytics": "25e9e4ec-4e56-4625-b70e-6881dd6ee07b"
+  }
 }
