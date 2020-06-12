@@ -7,7 +7,7 @@ import { HeroeModel } from 'src/app/models/heroe.model';
 import { HeroesService } from 'src/app/services/heroes.service';
 
 import Swal from 'sweetalert2';
-import { Route } from '@angular/compiler/src/core';
+
 
 @Component({
   selector: 'app-heroe',

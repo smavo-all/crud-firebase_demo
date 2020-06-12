@@ -35,7 +35,8 @@ export class HeroesService {
   getHeroes() {
     return this.http.get(`${ this.url }/Heroes.json`)
             .pipe(
-              map( this.crearArreglo )
+              map( this.crearArreglo ),
+              delay(0)
             );
   }
 
