@@ -25,6 +25,23 @@ export class HeroesComponent implements OnInit {
 
   }
 
+  borrarHeroe( heroe: HeroeModel, i: number ) {
 
+    Swal.fire({
+      title: '¿Está seguro?',
+      text: `Está seguro que desea borrar a ${ heroe.nombre }`,
+      icon: 'question',
+      showConfirmButton: true,
+      showCancelButton: true
+    }).then( resp => {
+
+      if ( resp.value ) {
+        this.heroes.splice(i, 1); //borrar por index con el splice
+        this.heroesService.borrarHeroe( heroe.id )
+        .subscribe();
+      }
+
+    });
+  }
 
 }

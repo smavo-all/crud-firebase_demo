@@ -28,7 +28,7 @@ export class HeroeComponent implements OnInit {
 
       this.heroesService.getHeroe( id )
         .subscribe( (resp: HeroeModel) => {
-          console.log(resp)
+          //console.log(resp)
           this.heroe = resp;
           this.heroe.id = id;
         });
@@ -36,6 +36,7 @@ export class HeroeComponent implements OnInit {
 
   }
 
+  
   guardar(form: NgForm) {
     if (form.invalid) {
       console.log('Formulario no válido');
